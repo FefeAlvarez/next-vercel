@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-
+import Link from "next/link";
+import { Navbar } from "../components/Navbar/Navbar";
 import styles from "../styles/Home.module.css";
 
 const HomePage: NextPage = () => {
@@ -11,10 +12,11 @@ const HomePage: NextPage = () => {
                 <meta name="description" content="Home Page" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-
+            <Navbar />
             <main className={styles.main}>
+                <h1>Contact Page</h1>
                 <h1 className={styles.title}>
-                    Ir al <a href="/about">About Page</a>
+                    Ir al <Link href="/about">About Page</Link>
                 </h1>
 
                 <p className={styles.description}>
