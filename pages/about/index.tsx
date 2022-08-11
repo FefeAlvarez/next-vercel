@@ -1,28 +1,29 @@
 import Link from "next/link";
-import { Fragment, ReactElement } from "react";
+import type { ReactElement } from "react";
+import type { NextPageWithLayout } from "../_app";
+import { Fragment } from "react";
 import { DarkLayout } from "../../components/layouts/DarkLayout";
 import { MainLayout } from "../../components/layouts/MainLayout";
-import { NextPageWithLayout } from "../_app";
 
-const ContactPage: NextPageWithLayout = () => {
+const AboutPage: NextPageWithLayout = () => {
     return (
         <Fragment>
-            <h1>Contact Page</h1>
+            <h1>About Page</h1>
             <h1 className={"title"}>
                 Ir al <Link href="/">Home</Link>
             </h1>
 
             <p className={"description"}>
                 Get started by editing{" "}
-                <code className={"code"}>pages/contact/index.tsx</code>
+                <code className={"code"}>pages/about.tsx</code>
             </p>
         </Fragment>
     );
 };
 
-export default ContactPage;
+export default AboutPage;
 
-ContactPage.getLayout = function getLayout(page: ReactElement) {
+AboutPage.getLayout = function getLayout(page: ReactElement) {
     return (
         <MainLayout>
             <DarkLayout>{page}</DarkLayout>
